@@ -8,13 +8,13 @@
             <ul class="col-md-8 col-md-offset-4">
                 {% for user in object_list %}
                     <a href="{% url 'myapp:detail' user.pk %}">
-                        <li>{{ user.pk }} - {{ user.name }}</li></a>
+                        <li>{{ user.pk }} - {{ user.note }}</li></a>
 
                     <a class="btn btn-success btn-sm"
-                    href="{% url 'myapp:update' user.pk %}">E</a>
+                    href="{% url 'myapp:update' user.pk %}">UPDATE</a>
 
                     <a class="btn btn-danger btn-sm"
-                    href="{% url 'myapp:delete' user.pk %}">X</a>
+                    href="{% url 'myapp:delete' user.pk %}">DELETE</a>
                 {% endfor %}
             </ul>
 
