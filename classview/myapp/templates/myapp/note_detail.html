@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Detail</h1>
+        <p><strong>Note: {{object.note}}</strong></p>
+        <a class="btn btn-success"
+            href="{% url 'myapp:update' object.id %}"
+            >Update</a>
+
+        <a class="btn btn-danger"
+            href="{% url 'myapp:delete' object.id %}"
+            >Delete</a>
+    </div>
+{% endblock %}
